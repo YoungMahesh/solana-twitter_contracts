@@ -3,7 +3,7 @@ import { Program, web3 } from "@project-serum/anchor"
 import assert from 'assert'
 import { Counter } from "target/types/counter"
 
-describe("mysolanaapp", () => {
+describe("counter", () => {
   // Configure the client to use the local cluster.
   const provider = Provider.env()
   setProvider(provider)
@@ -22,10 +22,8 @@ describe("mysolanaapp", () => {
       },
       signers: [baseAccount1],
     })
-    console.log("Your transaction signature", tx)
 
     const account = await mysolanaapp.account.baseAccount.fetch(baseAccount1.publicKey)
-    console.log('Current count is: ', account.count.toString())
     assert.ok(account.count.toString() === '0')
   })
 
@@ -38,7 +36,6 @@ describe("mysolanaapp", () => {
     })
 
     const account = await mysolanaapp.account.baseAccount.fetch(baseAccount1.publicKey)
-    console.log('Current count is: ', account.count.toString())
     assert.ok(account.count.toString() === '1')
   })
 })

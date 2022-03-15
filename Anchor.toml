@@ -3,9 +3,12 @@ seeds = false
 [programs.localnet]
 messages="BMkLrsFDEUtW46wgiXhES7pTiRGpfSF5b7FsCbYCq4qo"
 counter="4HozAEDcAaTGxV9KZx34gxHAEAPsFJNaoqqgupHTUnT7"
+twitter="HC4NZEsuGoVvbxBypDFjuFLRakQussGc5mfh9cGNHDgY"
 
 [programs.devnet]
+messages="BMkLrsFDEUtW46wgiXhES7pTiRGpfSF5b7FsCbYCq4qo"
 counter="4HozAEDcAaTGxV9KZx34gxHAEAPsFJNaoqqgupHTUnT7"
+
 
 [registry]
 url = "https://anchor.projectserum.com"

@@ -18,8 +18,8 @@ describe("messages", () => {
 
   it("Is initialized!", async () => {
     // Add your test here.
-
-    const tx = await program.rpc.initialize("Raja Rani", {
+    const msg1 = "Rajadhiraj"
+    const tx = await program.rpc.initialize(msg1, {
       accounts: {
         baseAccount: baseAccount1.publicKey,
         user: provider.wallet.publicKey,
@@ -27,16 +27,15 @@ describe("messages", () => {
       },
       signers: [baseAccount1],
     })
-    console.log("Txn:", tx)
+
 
     const accounts = await program.account.baseAccount.fetch(baseAccount1.publicKey)
-    console.log('send text is: ', accounts.data)
-    assert.ok(accounts.data === "Raja Rani")
 
+    assert.ok(accounts.data === msg1)
   })
 
   it("is storing messages", async() => {
-    const title1 = 'Megh'
+    const title1 = 'Update1111'
     await program.rpc.update(title1, {
       accounts: {
         baseAccount: baseAccount1.publicKey,
