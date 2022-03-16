@@ -4,6 +4,7 @@ import Layout from '../components/common/Layout'
 import Messages from '../components/Messages'
 import Counter from '../components/Counter'
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui'
+import Twitter from '../components/Twitter'
 
 
 export default function Home() {
@@ -16,8 +17,9 @@ export default function Home() {
       </Head>
 
     <WalletMultiButton />
-      <Messages />
-      <Counter />
+      {/* <Messages />
+      <Counter /> */}
+      <Twitter />
     </>
   )
 }

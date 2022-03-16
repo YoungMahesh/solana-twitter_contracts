@@ -4,6 +4,7 @@ interface ServerInfoInt {
         contracts: {
             messages: string
             counter: string
+            twitter: string
         }
     }
 }
@@ -15,6 +16,7 @@ export const serverInfo: ServerInfoInt = {
         contracts: {
             messages: 'BMkLrsFDEUtW46wgiXhES7pTiRGpfSF5b7FsCbYCq4qo',
             counter: '4HozAEDcAaTGxV9KZx34gxHAEAPsFJNaoqqgupHTUnT7',
+            twitter: 'HC4NZEsuGoVvbxBypDFjuFLRakQussGc5mfh9cGNHDgY',
         },
     },
     devnet: {
@@ -22,6 +24,7 @@ export const serverInfo: ServerInfoInt = {
         contracts: {
             messages: 'BMkLrsFDEUtW46wgiXhES7pTiRGpfSF5b7FsCbYCq4qo',
             counter: '4HozAEDcAaTGxV9KZx34gxHAEAPsFJNaoqqgupHTUnT7',
+            twitter: 'HC4NZEsuGoVvbxBypDFjuFLRakQussGc5mfh9cGNHDgY'
         }
     },
 }

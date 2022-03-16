@@ -26,6 +26,13 @@ describe('twitter', async() => {
         assert.ok(fetchedTweet.content.toString() === content1)
     })
 
+
+    it('fetch all tweets', async() => {
+        const allTweets = await twitterPro.account.tweet.all()
+        console.log('TweetsList', allTweets)
+
+    })
+
     it('update tweet', async() => {
 
 

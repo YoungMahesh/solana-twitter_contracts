@@ -3,7 +3,12 @@ import { Connection } from "@solana/web3.js";
 import { defaultNetwork, serverInfo } from "./1.serverInfo";
 import MessagesIdl from './messages.json'
 import CounterIdl from './counter.json'
+import TwitterIdl from './twitter.json'
 
+export const getServerInfo = (network: string) => {
+    if(serverInfo[network]) return serverInfo[network]
+    return serverInfo[defaultNetwork]
+}
 
 const getProvider = (network: string, wallet: Wallet,) => {
     const networkUrl = getServerInfo(network).networkUrl
@@ -25,8 +30,9 @@ export const getCounterProgram = (network: string, wallet: Wallet) => {
     return new Program(CounterIdl as Idl, counterAddr, provider)
 }
 
-export const getServerInfo = (network: string) => {
-    if(serverInfo[network]) return serverInfo[network]
-    return serverInfo[defaultNetwork]
+export const getTwitterProgram = (network: string, wallet: Wallet) => {
+    const twitterAddr = getServerInfo(network).contracts.twitter
+    return new Program(TwitterIdl as Idl, twitterAddr, getProvider(network, wallet))
 }
+
 
