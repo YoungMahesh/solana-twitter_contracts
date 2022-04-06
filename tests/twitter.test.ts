@@ -62,5 +62,16 @@ describe('twitter', async() => {
         }
     })
 
+    it('can delete a tweet', async function() {
+        const [tweet0] = await twitterPro.account.tweet.all()
+        await twitterPro.rpc.deleteTweet({
+            accounts: {
+                tweet: tweet0.publicKey,
+                author: provider.wallet.publicKey,
+            }
+        })
+
+        expect((await twitterPro.account.tweet.all()).length).to.eq(0)
+    })
 
 })

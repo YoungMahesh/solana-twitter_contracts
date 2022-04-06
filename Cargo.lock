@@ -404,13 +404,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "245097e9a4535ee1e3e3931fcfcd55a796a44c643e8596ff6566d68f09b87bbc"
 
 [[package]]
-name = "counter"
-version = "0.1.0"
-dependencies = [
- "anchor-lang",
-]
-
-[[package]]
 name = "cpufeatures"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -685,13 +678,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "057a3db23999c867821a7a59feb06a578fcb03685e983dff90daf9e7d24ac08f"
 dependencies = [
  "libc",
-]
-
-[[package]]
-name = "messages"
-version = "0.1.0"
-dependencies = [
- "anchor-lang",
 ]
 
 [[package]]
