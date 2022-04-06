@@ -14,7 +14,7 @@ twitter="HC4NZEsuGoVvbxBypDFjuFLRakQussGc5mfh9cGNHDgY"
 url = "https://anchor.projectserum.com"
 
 [provider]
-cluster = "devnet"
+cluster = "localnet"
 wallet = "/home/mahesh/.config/solana/id.json"
 
 [scripts]
